@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Restaurants</title>
+  </head>
+
+  <body>
+    <h1> Restaurants List </h1>
+    {% for rest in restaurants %}
+    <h2>{{rest.name}}</h3>
+    <a href="{{ url_for('restaurant_page', id=rest.id) }}"> Menu Items</a>
+    <br>
+    {% endfor %}
+
+    <a href="{{ url_for('new_restaurant') }}"> Add a new restaurant!</a>
+  </body>
+
+</html>
